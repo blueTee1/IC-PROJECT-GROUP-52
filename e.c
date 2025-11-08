@@ -8,11 +8,11 @@ int main(){
         return 1;
     }
 
-    //if (!fout){
-     //   perror("Error opening output file");
-       // fclose(fin);
-       // return 1;
-    //}
+    if (!fout){
+       perror("Error opening output file");
+       fclose(fin);
+       return 1;
+    }
     int ch;
     char key ='k';
     char enc;
@@ -24,4 +24,5 @@ int main(){
     fclose(fout);
     printf("Encrypted to encrypted.bin");
     return 0;
+
 }
